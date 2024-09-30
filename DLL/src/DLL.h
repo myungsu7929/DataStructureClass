@@ -33,15 +33,24 @@ void combineDLLNodes(DLLNode*, DLLNode*);
 class DLL{
     public:
         DLL();
+
         int insert(int);
+
         int find(int);
+
         int getlen(void);
-        std::string str(void);
+
         void initcursor(void);
+
         void toNext(void);
+
         void toPrev(void);
+
         int remove(int);
+
         void traverse(void);
+
+        std::string str(void);
 
 
     private:

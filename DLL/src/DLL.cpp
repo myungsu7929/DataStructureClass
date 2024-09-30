@@ -14,27 +14,32 @@ DLLNode::DLLNode(int val, bool is_head, bool is_tail){
     this->is_tail = is_tail;
 }
 
+
 DLLNode::DLLNode(int val){
     this->val = val;
 }
+
 
 void DLLNode::setNext(DLLNode* next){
     this->next = next;
 }
 
+
 void DLLNode::setPrev(DLLNode* prev){
     this->prev = prev;
 }
 
+
 DLLNode* DLLNode::getNext(void){
     return this->next;
-
 }
+
 
 DLLNode* DLLNode::getPrev(void){
     return this->prev;
 
 }
+
 
 int DLLNode::getval(void){
     return this->val;
@@ -45,7 +50,6 @@ void combineDLLNodes(DLLNode* node1p, DLLNode* node2p){
     node1p->setNext(node2p);
     node2p->setPrev(node1p);
 }
-
 
 
 DLL::DLL(){
@@ -60,17 +64,21 @@ DLL::DLL(){
     this->curp = this->head_nodep;
 }
 
+
 void DLL::toNext(void){
     if (this->curp != this->tail_nodep){
         this->curp = this->curp->getNext();
         
     }
 }
+
+
 void DLL::toPrev(void){
     if (this->curp != this->head_nodep){
         this->curp = this->curp->getPrev();
     }
 }
+
 
 int DLL::insert(int val){
     DLLNode* newnode = new DLLNode(val);
@@ -80,6 +88,7 @@ int DLL::insert(int val){
     this->len++;
     return 0;
 }
+
 
 void DLL::initcursor(void){
     this->curp = this->head_nodep;
@@ -101,6 +110,7 @@ std::string DLL::str(void){
 
 }
 
+
 int DLL::find(int search_val){
 
     int cnt = -1;
@@ -118,6 +128,7 @@ int DLL::find(int search_val){
 
     return -1; //실패시 -1을 반환
 }
+
 
 int DLL::remove(int target_idx){
     if (this->len == 0){
@@ -140,11 +151,10 @@ int DLL::remove(int target_idx){
 }
 
 
-
-
 int DLL::getlen(void){
     return this->len;
 }
+
 
 void DLL::traverse(void){
     this->initcursor();

@@ -70,10 +70,6 @@ int main(){
             }
 
             outpufilestream <<action<<'('<<value<<"): " << message << endl;
-
-       
-
-
         }
     }
 
