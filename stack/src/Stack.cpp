@@ -1,6 +1,7 @@
 #include "./Stack.h"
 #include <iostream>
-
+#include <string>
+#include <sstream>
 using namespace std;
 
 Stack::Stack(int size){
@@ -56,3 +57,19 @@ int Stack::top(){
 
     return *(this->s + this->cursor);
 }
+
+string Stack::itinerate(){
+    if(this->isEmpty()){
+        return "";
+    }
+    
+    stringstream current_state;
+
+    for(int i=0; i<this->cursor+1; i++){
+        current_state << to_string(this->s[i]) << " ";
+    }
+
+    return current_state.str();
+
+
+};

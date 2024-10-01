@@ -1,9 +1,9 @@
 #ifndef SRC_STACK_H_
 #define SRC_STACK_H_
 
+#include <string>
 
-
-
+using namespace std;
 class Stack{
     public:
         Stack(int);
@@ -12,6 +12,7 @@ class Stack{
         int top();
         int isEmpty();
         int isFull();
+        string itinerate();
     
     private:
         int max_size;
